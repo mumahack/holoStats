@@ -8,7 +8,9 @@ public class ThreeDPController : MonoBehaviour {
     public TextMesh Name;
     public GameObject Temperature;
     public TextMesh File;
-    public TextMesh TimeData;
+    public TextMesh TimeElapsed;
+    public TextMesh TimeRemaining;
+    public TextMesh TimeTotal;
 
     private float currentTemperature = 0;
     private float targetTemperature = 0;
@@ -51,11 +53,30 @@ public class ThreeDPController : MonoBehaviour {
     {
         return timeElapsed;
     }
-    public void setTimeElapsed()
+    public void setTimeElapsed(DateTime value)
     {
-        DateTime value = new DateTime();
-        TimeData.text = value.ToString("hh:mm:ss");
+        TimeElapsed.text = value.ToString("hh:mm:ss");
         timeElapsed = value;
+    }
+
+    public DateTime getTimeRemaining()
+    {
+        return timeRemaining;
+    }
+    public void setTimeRemaining(DateTime value)
+    {
+        TimeRemaining.text = value.ToString("hh:mm:ss");
+        timeRemaining = value;
+    }
+
+    public DateTime getTimeTotal()
+    {
+        return timeTotal;
+    }
+    public void setTimeTotal(DateTime value)
+    {
+        TimeTotal.text = value.ToString("hh:mm:ss");
+        timeTotal = value;
     }
 
     // Use this for initialization
