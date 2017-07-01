@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39F733AE-D626-41CC-BAC1-0341DAAC1FDC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>sdk_uwp</RootNamespace>
+    <AssemblyName>sdk-uwp</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.14393.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.14393.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Com\Apiomat\Frontend\AbstractClientDataModel.cs" />
+    <Compile Include="Com\Apiomat\Frontend\AOMClientResponse.cs" />
+    <Compile Include="Com\Apiomat\Frontend\AOMHttpClient.cs" />
+    <Compile Include="Com\Apiomat\Frontend\AOMHttpClientFactory.cs" />
+    <Compile Include="Com\Apiomat\Frontend\ApiomatRequestException.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Basics\Role.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Basics\User.cs" />
+    <Compile Include="Com\Apiomat\Frontend\ByteContainer.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Datastore.cs" />
+    <Compile Include="Com\Apiomat\Frontend\DeltaSyncStrategy.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Extensions\JsonExtensions.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Extensions\UriExtensions.cs" />
+    <Compile Include="Com\Apiomat\Frontend\External\AOMConcurrentDictionary.cs" />
+    <Compile Include="Com\Apiomat\Frontend\External\ConcurrentQueue.cs" />
+    <Compile Include="Com\Apiomat\Frontend\External\IProducerConsumerCollection.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Helper\DateTimeHelper.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Helper\JsonHelper.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Helper\ModelHelper.cs" />
+    <Compile Include="Com\Apiomat\Frontend\IDataContainer.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\AbstractStorage.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\AbstractStorageContainer.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\AOMOfflineHandler.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\AOMOfflineInfo.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\CollectionObjectMapping.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\CollectionStorageContainer.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\IAOMOfflineHandler.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\InMemoryCache.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\MemoryElseOfflineStorage.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\ObjectStorageContainer.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\OfflineDBHelper.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\SQLiteStorage.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\TaskIdHrefMapping.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\TaskObject.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Status.cs" />
+    <Compile Include="Com\Apiomat\Frontend\StreamContainer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\sdk_uwp.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- was "Content Include" -->
+    <None Include="Com\Apiomat\Frontend\External\LICENSE.txt" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

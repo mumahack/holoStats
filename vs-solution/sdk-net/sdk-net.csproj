@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88F6023C-57A9-4EE8-9F95-9A055ED59C22}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>sdk_net</RootNamespace>
+    <AssemblyName>sdk-net</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.1\lib\net45\crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.1.2\lib\net45\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.1.2\lib\net45\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\sqlite-net-pcl.1.1.1\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCL.raw, Version=0.8.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCL.raw.0.8.6\lib\net45\SQLitePCL.raw.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Com\Apiomat\Frontend\AbstractClientDataModel.cs" />
+    <Compile Include="Com\Apiomat\Frontend\AOMClientResponse.cs" />
+    <Compile Include="Com\Apiomat\Frontend\AOMHttpClient.cs" />
+    <Compile Include="Com\Apiomat\Frontend\AOMHttpClientFactory.cs" />
+    <Compile Include="Com\Apiomat\Frontend\ApiomatRequestException.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Basics\Role.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Basics\User.cs" />
+    <Compile Include="Com\Apiomat\Frontend\ByteContainer.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Datastore.cs" />
+    <Compile Include="Com\Apiomat\Frontend\DeltaSyncStrategy.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Extensions\JsonExtensions.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Extensions\UriExtensions.cs" />
+    <Compile Include="Com\Apiomat\Frontend\External\AOMConcurrentDictionary.cs" />
+    <Compile Include="Com\Apiomat\Frontend\External\ConcurrentQueue.cs" />
+    <Compile Include="Com\Apiomat\Frontend\External\IProducerConsumerCollection.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Helper\DateTimeHelper.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Helper\JsonHelper.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Helper\ModelHelper.cs" />
+    <Compile Include="Com\Apiomat\Frontend\IDataContainer.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\AbstractStorage.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\AbstractStorageContainer.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\AOMOfflineHandler.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\AOMOfflineInfo.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\CollectionObjectMapping.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\CollectionStorageContainer.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\IAOMOfflineHandler.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\InMemoryCache.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\MemoryElseOfflineStorage.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\ObjectStorageContainer.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\OfflineDBHelper.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\SQLiteStorage.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\TaskIdHrefMapping.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Offline\TaskObject.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Status.cs" />
+    <Compile Include="Com\Apiomat\Frontend\StreamContainer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Com\Apiomat\Frontend\External\LICENSE.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\SQLitePCL.raw.0.8.6\build\net45\SQLitePCL.raw.targets" Condition="Exists('..\packages\SQLitePCL.raw.0.8.6\build\net45\SQLitePCL.raw.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\SQLitePCL.raw.0.8.6\build\net45\SQLitePCL.raw.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SQLitePCL.raw.0.8.6\build\net45\SQLitePCL.raw.targets'))" />
+  </Target>
+</Project>
