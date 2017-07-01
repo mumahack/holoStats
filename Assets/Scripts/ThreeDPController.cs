@@ -15,8 +15,8 @@ public class ThreeDPController : MonoBehaviour {
     private float currentTemperature = 0;
     private float targetTemperature = 0;
     private string fileName = "";
-    private DateTime timeElapsed = new DateTime();
-    private DateTime timeRemaining = new DateTime();
+    private DateTime timeElapsed;
+    private DateTime timeRemaining;
     private DateTime timeTotal = new DateTime();
     private TextMeshPro temperatureText;
 
@@ -55,7 +55,8 @@ public class ThreeDPController : MonoBehaviour {
     }
     public void setTimeElapsed(DateTime value)
     {
-        TimeElapsed.text = value.ToString("hh:mm:ss");
+        value = timeElapsed.Add(new TimeSpan(0,0,1));
+        TimeElapsed.text = value.ToString("HH:mm:ss");
         timeElapsed = value;
     }
 
@@ -65,7 +66,8 @@ public class ThreeDPController : MonoBehaviour {
     }
     public void setTimeRemaining(DateTime value)
     {
-        TimeRemaining.text = value.ToString("hh:mm:ss");
+        value = timeRemaining.Subtract(new TimeSpan(0,0,1));
+        TimeRemaining.text = value.ToString("HH:mm:ss");
         timeRemaining = value;
     }
 
@@ -75,19 +77,21 @@ public class ThreeDPController : MonoBehaviour {
     }
     public void setTimeTotal(DateTime value)
     {
-        TimeTotal.text = value.ToString("hh:mm:ss");
+        timeTotal = value = new DateTime(0,0,0,2,0,0);
+        TimeTotal.text = value.ToString("HH:mm:ss");
         timeTotal = value;
     }
 
     // Use this for initialization
     void Start () {
         temperatureText = Temperature.GetComponent<TextMeshPro>();
-
+        timeElapsed = new DateTime(2017, 1, 1, 0, 0, 0);
+        timeRemaining = new DateTime(2017, 1, 1, 2, 0, 0);
     }
 	
 	// Update is called once per frame
 	void Update () {
-        temperatureText.text = string.Format("{0}°/{1}°", currentTemperature, targetTemperature);
+        temperatureText.text = string.Format("{0:0.0}°/{1:0.0}°", currentTemperature, targetTemperature);
 
     }
 }
