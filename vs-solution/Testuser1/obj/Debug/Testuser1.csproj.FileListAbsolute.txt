@@ -1,5 +1,3 @@
-C:\Users\Christian\Documents\holostats\holoStats\vs-solution\Testuser1\bin\Debug\x86\sqlite3.dll
-C:\Users\Christian\Documents\holostats\holoStats\vs-solution\Testuser1\bin\Debug\x64\sqlite3.dll
 C:\Users\Christian\Documents\holostats\holoStats\vs-solution\Testuser1\bin\Debug\Testuser1.exe.config
 C:\Users\Christian\Documents\holostats\holoStats\vs-solution\Testuser1\bin\Debug\Testuser1.exe
 C:\Users\Christian\Documents\holostats\holoStats\vs-solution\Testuser1\bin\Debug\Testuser1.pdb

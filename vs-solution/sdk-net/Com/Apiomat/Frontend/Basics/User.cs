@@ -48,8 +48,8 @@ namespace Com.Apiomat.Frontend.Basics
     /// </summary>
     public class User : AbstractClientDataModel
     {
-        private static readonly string _baseUrl = "http://poc.apiomat.enterprises/yambas/rest/apps/Industrie40";
-        private static readonly string _apiKey = "9079171190923938730";
+        private static readonly string _baseUrl = "http://192.168.25.224:83/yambas/rest/apps/Industrie40";
+        private static readonly string _apiKey = "8207843722967364153";
         private static readonly string _system = "LIVE";
         private static readonly string _sdkVersion = "2.5.2-146";
         private static readonly string _analyticsHost = "http://poc.apiomat.enterprises/analytics";

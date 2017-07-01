@@ -69,6 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Com\Apiomat\Frontend\AbstractClientDataModel.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Anycubicprinterconnector\JobData.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Anycubicprinterconnector\Printer.cs" />
+    <Compile Include="Com\Apiomat\Frontend\Anycubicprinterconnector\ToolData.cs" />
     <Compile Include="Com\Apiomat\Frontend\AOMClientResponse.cs" />
     <Compile Include="Com\Apiomat\Frontend\AOMHttpClient.cs" />
     <Compile Include="Com\Apiomat\Frontend\AOMHttpClientFactory.cs" />

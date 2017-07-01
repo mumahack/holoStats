@@ -23,9 +23,6 @@ public class Apiotest1 : MonoBehaviour {
     async void test()
     {
         User myUser = new User("johnWilhelm", "1,618");
-
-        // configure datastore with user credentials
-        Datastore.ConfigureWithCredentials(myUser);
         // and save it
         await myUser.SaveAsync();
     }
