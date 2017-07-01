@@ -77,6 +77,33 @@
     <Reference Include="Mono.Cecil">
       <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
     </Reference>
+    <Reference Include="crypto">
+      <HintPath>Assets\Plugins\DotNetDlls\crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets\Plugins\DotNetDlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>Assets\Plugins\DotNetDlls\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>Assets\Plugins\DotNetDlls\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="sdk-net">
+      <HintPath>Assets\Plugins\DotNetDlls\sdk-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net">
+      <HintPath>Assets\Plugins\DotNetDlls\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCL.raw">
+      <HintPath>Assets\Plugins\DotNetDlls\SQLitePCL.raw.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>Assets\Plugins\DotNetDlls\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>Assets\Plugins\DotNetDlls\System.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="TextMeshPro-1.0.55.56.0b10">
       <HintPath>Assets\TextMesh Pro\Plugins\TextMeshPro-1.0.55.56.0b10.dll</HintPath>
     </Reference>
