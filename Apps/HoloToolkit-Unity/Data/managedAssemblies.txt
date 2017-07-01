@@ -1,0 +1,15 @@
+Assembly-CSharp.dll
+sdk-uwp.dll
+UnityEngine.Timeline.dll
+nunit.framework.dll
+UnityEngine.UI.dll
+Plugin.Connectivity.dll
+TextMeshPro-1.0.55.56.0b10.dll
+SQLite-net.dll
+UnityEngine.HoloLens.dll
+UnityEngine.Networking.dll
+crypto.dll
+Newtonsoft.Json.dll
+System.Collections.Immutable.dll
+SQLitePCL.raw.dll
+Plugin.Connectivity.Abstractions.dll
